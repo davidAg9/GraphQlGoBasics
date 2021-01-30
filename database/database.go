@@ -23,6 +23,7 @@ type DB struct {
 //Connect connects user the a local database server and exposes the graphql server resource
 func Connect() *DB {
 	env.Set()
+
 	ctx, cancel := context.WithTimeout(context.Background(), 50*time.Second)
 	defer cancel()
 	username := os.Getenv("dbUsername")
