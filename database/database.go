@@ -39,6 +39,7 @@ func Connect() *DB {
 	if err != nil {
 		log.Fatalf("line 31:%+v", err)
 	}
+
 	return &DB{
 		Client: client,
 	}
